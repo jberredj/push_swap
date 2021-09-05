@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math_stats.h                                       :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 16:18:44 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/05 13:42:50 by jberredj         ###   ########.fr       */
+/*   Created: 2021/09/03 11:40:50 by jberredj          #+#    #+#             */
+/*   Updated: 2021/09/05 13:41:44 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATH_STATS_H
-# define MATH_STATS_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
+# include "structs/t_stack.h"
 
-typedef struct s_med_qrt
-{
-	int	frt_qrt;
-	int	med;
-	int	trd_qrt;
-}				t_med_qrt;
-
-typedef struct s_chunks
-{
-	size_t	ch_nbr;
-	int		*ch_vals;
-}				t_chunks;
-
-int		find_fst_qrt_med_trd_qrt(t_stack stk, t_med_qrt *dat);
-void	sort_array(int *array, size_t len);
+int	malloc_stacks(t_stack *a, t_stack *b, size_t nmemb);
+int	fill_stack_a(int argc, char **argv, t_stack *a);
 #endif

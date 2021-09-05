@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 14:49:18 by jberredj          #+#    #+#             */
-/*   Updated: 2021/08/23 15:52:51 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/03 11:22:29 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	remove_top(t_stack *s)
 {
 	if (s->size < 1)
 		return ;
-	ft_memmove(&s->tab[0], &s->tab[1], s->size * sizeof(int));
+	ft_memmove(&s->tab[0], &s->tab[1], (s->size - 1) * sizeof(int));
 	s->size--;
 }
 
@@ -27,13 +27,12 @@ void	add_top(t_stack *s, int val)
 	if (s->size + 1 > s->max_size)
 		return ;
 	if (s->size > 0)
-		ft_memmove(&s->tab[1], &s->tab[0], s->size * sizeof(int));
+		ft_memmove(&s->tab[1], &s->tab[0], (s->size) * sizeof(int));
 	s->tab[0] = val;
 	s->size++;
 }
 
-
-static void p(t_stack *src, t_stack *dst, char c)
+static void	p(t_stack *src, t_stack *dst, char c)
 {
 	int	tmp;
 
