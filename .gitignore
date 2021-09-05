@@ -52,5 +52,9 @@ Mkfile.old
 dkms.conf
 
 _debug*
+.vscode
 .vscode/*
 *.py
+push_swap
+checker_linux
+checker
