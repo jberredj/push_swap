@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 15:53:19 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/01 16:50:27 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/06 11:41:40 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ void	biggest_is_faster(t_stack *a, t_stack *b, t_stack_mv mv)
 	{
 		if (mv.forward)
 			while (mv.nbr--)
-				rb(a, b);
+				rb(a, b, true);
 		else
 			while (mv.nbr--)
-				rrb(a, b);
+				rrb(a, b, true);
 	}
-	pa(a, b);
+	pa(a, b, true);
 }
 
 void	lowest_is_faster(t_stack *a, t_stack *b, t_stack_mv mv)
@@ -36,13 +36,13 @@ void	lowest_is_faster(t_stack *a, t_stack *b, t_stack_mv mv)
 	{
 		if (mv.forward)
 			while (mv.nbr--)
-				rb(a, b);
+				rb(a, b, true);
 		else
 			while (mv.nbr--)
-				rrb(a, b);
+				rrb(a, b, true);
 	}
-	pa(a, b);
-	ra(a, b);
+	pa(a, b, true);
+	ra(a, b, true);
 }
 
 void	sort_b(t_stack *a, t_stack *b)

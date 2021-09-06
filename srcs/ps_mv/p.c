@@ -6,11 +6,12 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 14:49:18 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/03 11:22:29 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/06 11:16:28 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdbool.h>
 #include "structs/t_stack.h"
 #include "../libs/libft/includes/libft.h"
 
@@ -32,7 +33,7 @@ void	add_top(t_stack *s, int val)
 	s->size++;
 }
 
-static void	p(t_stack *src, t_stack *dst, char c)
+static void	p(t_stack *src, t_stack *dst, char c, bool output)
 {
 	int	tmp;
 
@@ -41,17 +42,20 @@ static void	p(t_stack *src, t_stack *dst, char c)
 	tmp = src->tab[0];
 	remove_top(src);
 	add_top(dst, tmp);
-	write(1, "p", 1);
-	write(1, &c, 1);
-	write(1, "\n", 1);
+	if (output)
+	{
+		write(1, "p", 1);
+		write(1, &c, 1);
+		write(1, "\n", 1);
+	}
 }
 
-void	pa(t_stack *a, t_stack *b)
+void	pa(t_stack *a, t_stack *b, bool output)
 {
-	p(b, a, 'a');
+	p(b, a, 'a', output);
 }
 
-void	pb(t_stack *a, t_stack *b)
+void	pb(t_stack *a, t_stack *b, bool output)
 {
-	p(a, b, 'b');
+	p(a, b, 'b', output);
 }

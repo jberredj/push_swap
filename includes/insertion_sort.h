@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 16:45:52 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/05 13:42:55 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/06 11:36:05 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # define RRB 128
 # define RRR 192
 
-typedef void (*	t_func_ptr)(t_stack *, t_stack *);
+typedef void (*	t_func_ptr)(t_stack *, t_stack *, bool);
 
 typedef struct s_dstk_mv
 {

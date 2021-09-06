@@ -55,6 +55,6 @@ _debug*
 .vscode
 .vscode/*
 *.py
-push_swap
+./push_swap
 checker_linux
-checker
+./checker

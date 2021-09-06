@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 16:16:01 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/01 16:47:47 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/06 15:47:12 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 #ifndef TEST_MV_NBR
-# define TEST_MV_NBR 100
+# define TEST_MV_NBR 500
 #endif
 
 static t_dstk_mv	select_lowest(t_dstk_mv *move, int nbr)

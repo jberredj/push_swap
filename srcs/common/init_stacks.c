@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:38:39 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/05 13:33:35 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/06 17:04:55 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,15 @@ int	malloc_stacks(t_stack *a, t_stack *b, size_t nmemb)
 {
 	a->tab = (int *)ft_calloc(nmemb, sizeof(int));
 	if (!a->tab)
+	{
+		ft_putendl_fd("Error", 2);
 		return (-1);
+	}
 	b->tab = (int *)ft_calloc(nmemb, sizeof(int));
 	if (!b->tab)
 	{
 		free(a->tab);
+		ft_putendl_fd("Error", 2);
 		return (-1);
 	}
 	a->max_size = nmemb;
