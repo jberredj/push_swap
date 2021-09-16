@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:38:39 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/06 17:04:55 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/16 15:06:45 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,9 @@ static int	check_for_int_max(char *str)
 	int_max = "2147483647";
 	if (*str == '+' || *str == '-')
 	{
+		if (*str == '-')
+			int_max = "2147483648";
 		str++;
-		int_max = "2147483648";
 	}
 	len = ft_strlen(str);
 	if (len > 10)

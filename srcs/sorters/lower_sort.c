@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:36:12 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/06 12:18:24 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/16 15:27:50 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,19 +84,19 @@ void	sort_4_5(t_stack *a, t_stack *b)
 	{
 		mv = find_shortest_to_top(*a, find_in_between_inf(*a, b->tab[0]));
 		if (mv.forward)
-			while (mv.nbr--)
+			while (mv.nbr-- > 0)
 				ra(a, b, true);
 		else
-			while (mv.nbr--)
+			while (mv.nbr-- > 0)
 				rra(a, b, true);
 		pa(a, b, true);
 	}
 	mv = find_shortest_to_top(*a, a->tab[find_lowest(a)]);
 	if (mv.forward)
-		while (mv.nbr--)
+		while (mv.nbr-- > 0)
 			ra(a, b, true);
 	else
-		while (mv.nbr--)
+		while (mv.nbr-- > 0)
 			rra(a, b, true);
 	pa(a, b, true);
 }

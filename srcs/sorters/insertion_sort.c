@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 16:16:43 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/06 11:38:09 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/16 15:44:11 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static void	execute_move(t_stack *a, t_stack *b, t_dstk_mv mv)
 
 static void	insert_first_values(t_stack *a, t_stack *b)
 {
-	long	value;
+	int	value;
 
 	value = a->tab[0];
 	pb(a, b, true);
@@ -92,9 +92,9 @@ void	insertion_sort(t_stack *a, t_stack *b)
 	index = find_lowest(a);
 	last = find_shortest_to_top(*a, a->tab[index]);
 	if (last.forward)
-		while (last.nbr--)
+		while (last.nbr-- > 0)
 			ra(a, b, true);
 	else
-		while (last.nbr--)
+		while (last.nbr-- > 0)
 			rra(a, b, true);
 }

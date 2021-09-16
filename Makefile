@@ -6,15 +6,15 @@
 #    By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/23 15:37:38 by jberredj          #+#    #+#              #
-#    Updated: 2021/09/14 12:00:46 by jberredj         ###   ########.fr        #
+#    Updated: 2021/09/16 15:38:30 by jberredj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	push_swap
 
 CC			=	clang
-OPTI		=	-O3
-DEBUG		=	# -g -Wunused-function
+OPTI		=	# -O3
+DEBUG		=	-g -Wunused-function
 CFLAGS		=	-Wall -Wextra -Werror $(OPTI) $(DEBUG)
 
 HEADERS		=	-I includes

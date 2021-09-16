@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 15:56:57 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/03 11:25:11 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/16 15:45:48 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-int	find_in_between(t_stack stk, long val)
+int	find_in_between(t_stack stk, int val)
 {
 	int		i;
 	int		j;
@@ -59,7 +59,7 @@ static t_dstk_mv	combined_two_mv(t_stack_mv mv_a, t_stack_mv mv_b)
 
 t_dstk_mv	test_move(int index, t_stack *a, t_stack *b)
 {
-	long		value;
+	int			value;
 	int			low;
 	int			high;
 	t_stack_mv	mv_a;

@@ -6,7 +6,7 @@
 /*   By: jberredj <jberredj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 12:06:28 by jberredj          #+#    #+#             */
-/*   Updated: 2021/09/03 11:24:51 by jberredj         ###   ########.fr       */
+/*   Updated: 2021/09/16 15:44:36 by jberredj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	roundup_divide(int nbr, int div)
 	return (i_res);
 }
 
-int	find_in_stack(t_stack s, long val)
+int	find_in_stack(t_stack s, int val)
 {
 	int	i;
 
@@ -42,7 +42,7 @@ int	find_in_stack(t_stack s, long val)
 	return (-1);
 }
 
-t_stack_mv	find_shortest_to_top(t_stack s, long val)
+t_stack_mv	find_shortest_to_top(t_stack s, int val)
 {
 	int			val_pos;
 
@@ -54,14 +54,14 @@ t_stack_mv	find_shortest_to_top(t_stack s, long val)
 
 size_t	find_biggest(t_stack *stk)
 {
-	size_t	i;
-	long	biggest;
+	int		i;
+	int		biggest;
 	size_t	biggest_index;
 
 	i = -1;
 	biggest = stk->tab[0];
 	biggest_index = 0;
-	while (++i < stk->size)
+	while (++i < (int)stk->size)
 	{
 		if (stk->tab[i] > biggest)
 		{
@@ -74,14 +74,14 @@ size_t	find_biggest(t_stack *stk)
 
 size_t	find_lowest(t_stack *stk)
 {
-	size_t	i;
-	long	lowest;
+	int		i;
+	int		lowest;
 	size_t	lowest_index;
 
 	i = -1;
 	lowest = stk->tab[0];
 	lowest_index = 0;
-	while (++i < stk->size)
+	while (++i < (int)stk->size)
 	{
 		if (stk->tab[i] < lowest)
 		{
